@@ -1,2 +1,3 @@
-<!--pages/userCenter/userCenter.wxml-->
-<text>pages/userCenter/userCenter.wxml</text>
+<view class="container">
+  个人中心
+</view>
