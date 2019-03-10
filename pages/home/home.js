@@ -4,6 +4,15 @@ import regeneratorRuntime from '../../libs/regenerator-runtime.js'
 
 Page({
   data: {},
+
+  onLoad() {
+    this.goPage()
+  },
+
+  async goPage() {
+    await login()
+  },
+
   TakePhoto() {
     wx.showActionSheet({
       itemList: ['拍照', '从相册里选择'],
