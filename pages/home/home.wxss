@@ -1,1 +1,17 @@
 /* pages/home/home.wxss */
+.head{
+    left: 12px;
+    top: 90px;
+    width: 100px;
+    height: 30px;
+    color: rgba(16, 16, 16, 1);
+    font-size: 18px;
+    text-align: left;
+    font-family: PingFangSC-regular;
+    }
+.TakePhoto::after{
+    border:none;
+}
+.TakePhoto{
+    width: 80px;
+}
