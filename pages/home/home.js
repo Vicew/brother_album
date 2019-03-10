@@ -1,5 +1,9 @@
-// pages/home/home.js
+import regeneratorRuntime from '../../libs/regenerator-runtime.js'
+import interaction from '../../utils/interaction.js';
+import login from '../../utils/login.js'
+
 Page({
+<<<<<<< HEAD
   data: {},
   TakePhoto() {
     wx.showActionSheet({
@@ -29,5 +33,18 @@ Page({
         }
       }
     })
+=======
+
+  data: {
+
+  },
+
+  onLoad: function (options) {
+    this.goPage()
+  },
+
+  async goPage() {
+    await login()
+>>>>>>> 3327720197ccc0785f15d51344d88deb44abb8b7
   }
 })
