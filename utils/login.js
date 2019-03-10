@@ -1,7 +1,6 @@
 import _baseUrl from '../static/js/serverConfig.js'
 import regeneratorRuntime from '../libs/regenerator-runtime.js'
 import interaction from './interaction.js'
-const request = require('')
 
 // 获取微信的code--临时凭证
 const getWxCode = () => {
