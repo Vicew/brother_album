@@ -78,5 +78,9 @@ Page({
     }
     this.authed = true
     wx.setStorageSync('authed', true)
+    this.setData({
+      authed: true
+    })
+    interaction.showToast('授权成功')
   }
 })
