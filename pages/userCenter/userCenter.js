@@ -8,7 +8,7 @@ Page({
     authed: true, // 是否授权过
   },
   
-  onLoad() {
+  async onLoad() {
     await login()
     const authed = wx.getStorageSync('authed')
     this.setData({
