@@ -1,13 +1,12 @@
 <view wx:if="{{ authed }}" class="bg">
   <view class="head">
     <view class="headIcon">
-      <image src="{{userInfo.avatarUrl}}" style="width:70px;height:70px;"></image>
+      <image src="{{userInfo.avatar}}" style="width:70px;height:70px;"></image>
     </view>
     <view class="login">
-      {{userInfo.nickName}}
+      {{userInfo.nickname}}
     </view>
   </view>
-  <button class="button" open-type="getUserInfo" wx:if="{{hasUserInfo}}" bindgetuserinfo="doAuthorization"> 微信登录 </button>
 </view>
 
 <view wx:else class="container">

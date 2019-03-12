@@ -6,6 +6,7 @@ import axios from '../../utils/axios.js'
 Page({
   data: {
     authed: true, // 是否授权过
+    userInfo: {}
   },
   
   async onLoad() {
@@ -18,7 +19,10 @@ Page({
   },
 
   async goPage() {
-    // const res = axios.get('user/info')
+    const res = await axios.get('/user/profile')
+    this.setData({
+      userInfo: res.result.userInfo,
+    })
   },
 
   async onGotUserInfo(e) {
