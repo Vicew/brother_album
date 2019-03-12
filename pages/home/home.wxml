@@ -1,3 +1,9 @@
-<view class="container">
+<view wx:if="{{authed}}" class="container">
   <button type="default" class="TakePhoto" bindtap="TakePhoto">拍照</button>
+</view>
+
+<view wx:else class="container">
+  <image src="https://imgcdn.meizhuahuyu.com/1543911501614.png" class="default" />
+  <button class="auth-button" open-type="getUserInfo" bind:getuserinfo="onGotUserInfo">点击微信授权</button>
+  <text class="tip">授权后我们不会将您的信息提供给第三方</text>
 </view>

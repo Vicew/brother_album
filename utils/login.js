@@ -33,22 +33,13 @@ const systemLogin = async (resolve, reject) => {
       code: code,
     },
     success: function (rspData) {
-      // 保存TOKEN字端
-      const token = rspData.data.result.token
-      console.log('调用后端登录接口, token为：', token)
-      wx.setStorageSync('token', token)
+      // 保存 token 和 auth 的信息
       console.log('--------------------------------------------------')
-
-      const { userId, wAvatar, wNick, wphone, adminId } = rspData.data.result
+      const { id, token, authed } = rspData.data.result
       console.log(rspData.data.result)
-      console.log('保存用户信息, userId为：', userId)
-      wx.setStorageSync('userinfo', {
-        userId: userId,
-        nickName: wNick,
-        avatarUrl: wAvatar,
-        phone: wphone,
-        adminId: adminId
-      })
+      wx.setStorageSync('token', token)
+      wx.setStorageSync('authed', authed)
+      wx.setStorageSync('id', id)
       console.log('--------------------------------------------------')
       resolve()
     },
