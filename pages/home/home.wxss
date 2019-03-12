@@ -15,30 +15,3 @@
 .TakePhoto{
     width: 80px;
 }
-
-.container {
-  text-align: center;
-  /* margin-top: 350rpx; */
-}
-
-.default {
-  width: 290rpx;
-  height: 290rpx;
-}
-
-.auth-button {
-  height: 80rpx;
-  line-height: 80rpx;
-  color: #FFF;
-  font-size: 30rpx;
-  background-color: #4E3CFF;
-  padding: 0 50rpx 0 50rpx;
-  border-radius: 40rpx;
-  margin-top: 74rpx;
-}
-
-.tip {
-  color: #A7A7A7;
-  font-size: 26rpx;
-  margin-top: 50rpx;
-}

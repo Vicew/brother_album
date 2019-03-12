@@ -1,4 +1,4 @@
-<view class="bg">
+<view wx:if="{{ authed }}" class="bg">
   <view class="head">
     <view class="headIcon">
       <image src="{{userInfo.avatarUrl}}" style="width:70px;height:70px;"></image>
@@ -8,4 +8,10 @@
     </view>
   </view>
   <button class="button" open-type="getUserInfo" wx:if="{{hasUserInfo}}" bindgetuserinfo="doAuthorization"> 微信登录 </button>
+</view>
+
+<view wx:else class="container">
+  <image src="https://imgcdn.meizhuahuyu.com/1543911501614.png" class="default" />
+  <button class="auth-button" open-type="getUserInfo" bind:getuserinfo="onGotUserInfo">点击微信授权</button>
+  <text class="tip">授权后我们不会将您的信息提供给第三方</text>
 </view>
