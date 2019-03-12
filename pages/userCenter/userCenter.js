@@ -57,5 +57,6 @@ Page({
       authed: true
     })
     interaction.showToast('授权成功')
+    this.goPage()
   }
 })
