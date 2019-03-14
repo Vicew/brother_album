@@ -20,6 +20,9 @@ Page({
     await login()
     const res = await axios.get('/picture')
     console.log(res.result.pictureList)
+    if (res.result.pictureList.length % 2 === 1) {
+      res.result.pictureList.push({})
+    }
     this.setData({
       pictureList: res.result.pictureList,
     })

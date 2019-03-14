@@ -1,48 +1,26 @@
-/* pages/home/home.wxss */
-.head{
-    width: 100%;
-    height: 80px;
-    bottom: 5px;
-    left: 130px;
-    position: relative;
-    }
-.TakePhoto::after{
-    border:none;
-}
-.TakePhoto{
-    width: 80px;
-}
-.headtext {
-    color: rgba(16, 16, 16, 1);
-    font-size: 20px;
-    font-weight: bolder;
-    text-align: center;
-    font-family: STFangsong;
-    text-align: center;
-    /* right: 5px; */
-    top: 15px;
-    left: -8px;
-    position: absolute;
+.head {
+  text-align: center;
+  margin-top: 20rpx;
 }
 
-.MainContent {
-    width: 100%;
-
+.body {
+  display: flex;
+  margin-top: 20rpx;
+  flex-wrap: wrap;
+  justify-content: space-around
 }
 
-.LeftPicture {
-    left: 28px;
-    width: 135px;
-    height: 120px;
-    position: relative;
+.picture-wrap {
+  display: flex;
+  margin-bottom: 20rpx;
+  flex-direction: column;
 }
-.PictureName{
-    right: 90px;
-    top:5px;
-    position: relative;
+
+.picture {
+  width: 300rpx;
+  height: 300rpx;
 }
-.Author{
-    top:20px;
-    right: 170px;
-    position: relative;
-} 
+
+.info {
+  font-size: 24rpx;
+}

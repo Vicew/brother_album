@@ -1,11 +1,13 @@
-<view class="head" style="background:url('../../static/images/heart.png') no-repeat;opacity:0.6">
-    <text class="headtext">相册列表</text>
+<view class="head">
+  <text class="title">我的图片</text>
 </view>
-<view class="MainContent">
-    <image class="LeftPicture" src="../../static/images/heart.png" wx:for="{{Whole_Picture}}" wx:key="property"/>
-    <text class="PictureName" wx:for="{{Whole_Picture}}" wx:key="property">{{PictureName}}</text>
-    <text class="Author" wx:for="{{Whole_Picture}}" wx:key="property">创建人：{{Author}}</text>
+
+<view class="body">
+  <view class="picture-wrap" wx:for="{{pictureList}}" wx:key="item.id">
+    <image class="picture" src="{{item.url}}" />
+    <view class="info">
+      <text>{{item.position}}: </text>
+      <text>{{item.description}}</text>
+    </view>
+  </view>
 </view>
-<!-- <view class="container">
-  <button type="default" class="TakePhoto" bindtap="TakePhoto">拍照</button>
-</view> -->
