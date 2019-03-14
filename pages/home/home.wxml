@@ -2,9 +2,9 @@
     <text class="headtext">相册列表</text>
 </view>
 <view class="MainContent">
-    <image class="LeftPicture" src="../../static/images/heart.png" wx:for="{{Whole_Picture}}"/>
-    <text class="PictureName" wx:for="{{Whole_Picture}}">{{PictureName}}</text>
-    <text class="Author" wx:for="{{Whole_Picture}}">创建人：{{Author}}</text>
+    <image class="LeftPicture" src="../../static/images/heart.png" wx:for="{{Whole_Picture}}" wx:key="property"/>
+    <text class="PictureName" wx:for="{{Whole_Picture}}" wx:key="property">{{PictureName}}</text>
+    <text class="Author" wx:for="{{Whole_Picture}}" wx:key="property">创建人：{{Author}}</text>
 </view>
 <!-- <view class="container">
   <button type="default" class="TakePhoto" bindtap="TakePhoto">拍照</button>
