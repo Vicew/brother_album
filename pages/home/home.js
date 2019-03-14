@@ -5,12 +5,21 @@ import axios from '../../utils/axios.js'
 
 Page({
 
+  data: {
+    pictureList: []
+  },
+
   onLoad() {
     this.goPage()
   },
 
   async goPage() {
     await login()
+    const res = await axios.get('/picture')
+    console.log(res.result.pictureList)
+    this.setData({
+      pictureList: res.result.pictureList,
+    })
   },
 
   TakePhoto() {
