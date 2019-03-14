@@ -5,6 +5,12 @@ import axios from '../../utils/axios.js'
 
 Page({
 
+  data:{
+    Whole_Picture:[1,2],
+    PictureName:"啦啦啦啦啦",
+    Author:"小俊",
+  },
+  
   onLoad() {
     this.goPage()
   },
