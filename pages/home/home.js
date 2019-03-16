@@ -16,10 +16,11 @@ Page({
     this.goPage()
   },
 
-  showBigImg:function(option){
+  showBigImg(option) {
+    const urls = this.data.pictureList.map(item => item.url)
     wx.previewImage({
-      current: option.target.dataset.src, // 当前显示图片的http链接
-      urls: [this.data.pictureList] // 需要预览的图片http链接列表
+      current: urls[0], // 当前显示图片的http链接
+      urls: urls // 需要预览的图片http链接列表
     })
   },
 
