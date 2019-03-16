@@ -3,11 +3,11 @@
 </view>
 
 <view class="body">
-  <view class="picture-wrap" wx:for="{{pictureList}}" wx:key="item.id">
-  <view class="cover" bind:tap="showBigImg">
-    <image class="picture" src="{{item.url}}"/>
-    <image class="decoration" src="../../static/images/xiaoenai.png"/>
-  </view>
+  <view class="picture-wrap" wx:for="{{pictureList}}" wx:key="item.id" wx:for-index="index">
+    <view class="cover" bind:tap="showBigImg" data-index="{{index}}">
+      <image class="picture" src="{{item.url}}"/>
+      <image class="decoration" src="../../static/images/xiaoenai.png"/>
+    </view>
     <view class="info">
       <text>{{item.position}}: </text>
       <text>{{item.description}}</text>
