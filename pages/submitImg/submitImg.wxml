@@ -1,0 +1,17 @@
+<view class='page'>
+    <input class='locateText' maxlenth="6" placeholder="地点" placeholder-style="color:#b3b3b3;font-size:18px;" maxlenth="6" auto-height></input>
+    <view class='line'></view>
+    <textarea class="particularTextarea" placeholder="输入详情" maxlength="40" placeholder-style="color:#b3b3b3;font-size:18px;" style="height: 100px" />
+    <view class="image_content">
+        <view class='image' wx:for="{{img_url}}" wx:key="provide">
+            <image class="moment_img" src="{{item}}"></image>
+        </view>
+        <view class='addImgBlock'>
+            <image bindtap="chooseImg" class="moment_img" src='../../static/images/add (1).png'></image>
+        </view>
+    </view>
+    <button bindtap="send" class="btn1">
+        <image class='btnImg' src='../../static/images/right.png'></image>
+        <view>发布</view>
+    </button>
+</view>

@@ -1,7 +1,8 @@
 {
   "pages": [
     "pages/home/home",
-    "pages/userCenter/userCenter"
+    "pages/userCenter/userCenter",
+    "pages/submitImg/submitImg"
   ],
   "window": {
     "backgroundTextStyle": "light",

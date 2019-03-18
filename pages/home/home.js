@@ -18,7 +18,7 @@ Page({
 
   showBigImg(option) {
     const urls = this.data.pictureList.map(item => item.url)
-    console.log(option.target.dataset)
+    console.log(option)
     wx.previewImage({
       current: urls[option.target.dataset.index], // 当前显示图片的http链接
       urls: urls // 需要预览的图片http链接列表
@@ -28,7 +28,7 @@ Page({
   async goPage() {
     await login()
     const res = await axios.get('/picture')
-    console.log(res.result.pictureList)
+    console.log(res)
     if (res.result.pictureList.length % 2 === 1) {
       res.result.pictureList.push({})
     }
@@ -36,34 +36,9 @@ Page({
       pictureList: res.result.pictureList,
     })
   },
-
-  TakePhoto() {
-    wx.showActionSheet({
-      itemList: ['拍照', '从相册里选择'],
-      success: function (res) {
-        //console.log(res.tapIndex);
-        if (res.tapIndex == 1) {
-          wx.chooseImage({
-            count: 1, // 默认9
-            sizeType: ['original'], // 可以指定是原图还是压缩图，默认二者都有
-            sourceType: ['album'], // 可以指定来源是相册还是相机，默认二者都有
-            success: function (res) {
-              // 返回选定照片的本地文件路径列表，tempFilePath可以作为img标签的src属性显示图片
-              var tempFilePaths = res.tempFilePaths
-            }
-          })
-        }
-        if (res.tapIndex == 0) {
-          wx.chooseImage({
-            sizeType: ['original'], // 可以指定是原图还是压缩图，默认二者都有
-            sourceType: ['camera'], // 可以指定来源是相册还是相机，默认二者都有
-            success: function (res) {
-              // 返回选定照片的本地文件路径列表，tempFilePath可以作为img标签的src属性显示图片
-              var tempFilePaths = res.tempFilePaths
-            }
-          })
-        }
-      }
+  addImg(){
+    wx.navigateTo({
+      url: '../../pages/submitImg/submitImg'
     })
   },
 })

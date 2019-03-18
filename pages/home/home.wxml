@@ -1,16 +1,21 @@
 <view class="head">
   <text class="title">我的图片</text>
 </view>
-
 <view class="body">
   <view class="picture-wrap" wx:for="{{pictureList}}" wx:key="item.id" wx:for-index="index">
     <view class="cover" bind:tap="showBigImg" data-index="{{index}}">
-      <image class="picture" src="{{item.url}}"/>
-      <image class="decoration" src="../../static/images/xiaoenai.png"/>
+      <image class="picture" src="{{item.url}}" />
+      <image class="decoration" src="../../static/images/xiaoenai.png" />
     </view>
     <view class="info">
-      <text>{{item.position}}: </text>
+      <text>{{item.position}}:</text>
       <text>{{item.description}}</text>
+    </view>
+  </view>
+  <view class="picture-wrap" bind:tap="addImg">
+    <image class="addImg" src="../../static/images/add.png" />
+    <view class="info">
+      <text>添加图片</text>
     </view>
   </view>
 </view>

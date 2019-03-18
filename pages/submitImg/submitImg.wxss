@@ -1,0 +1,68 @@
+.page {
+    padding: 20px
+}
+
+.locateText {
+    width: 100%;
+    margin-bottom: 2px;
+    font-family: "FZShuTi", Georgia, Serif;
+    font-size: 15px;
+    padding: 5px
+}
+
+.image {
+    width: 31%;
+    height: 100px;
+    padding: 2px
+}
+
+.addImgBlock {
+    width: 98px;
+    height: 98px;
+    background-color: #efe4f057;
+}
+
+.moment_img {
+    width: 98px;
+    height: 98px;
+}
+
+.image_content {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px
+}
+
+.line {
+    margin: 0 auto;
+    width: 100%;
+    height: 5rpx;
+    background-color: #D8D8D8;
+}
+.particularTextarea{
+    margin-top: 10px;
+    left: 4px;
+}
+.btn1 {
+    width: 80%;
+    margin-top: 20rpx;
+    background-color: burlywood;
+    color: white;
+    border-radius: 98rpx;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .btnImg {
+    margin-right: 8rpx;
+    width: 55rpx;
+    height: 55rpx;
+  }
+  
+  .btn1::after {
+    border-radius: 98rpx;
+    border: 0; 
+  }

@@ -15,7 +15,10 @@
     margin-bottom: 20rpx;
     flex-direction: column;
 }
-
+.addImg{
+    width: 300rpx;
+    height: 300rpx;
+}
 .picture {
     width: 300rpx;
     height: 300rpx;
@@ -25,7 +28,10 @@
     margin-bottom: 20px;
     position: relative;
 }
-
+.addImg{
+    width: 170rpx;
+    height: 170rpx;
+}
 .info {
     font-family:"FZShuTi",Georgia,Serif;
     font-size:17px;
