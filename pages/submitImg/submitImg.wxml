@@ -1,16 +1,18 @@
 <view class='page'>
-    <input class='locateText' maxlenth="6" placeholder="地点" placeholder-style="color:#b3b3b3;font-size:18px;" maxlenth="6" auto-height></input>
+    <input class='locateText' maxlength="6" placeholder="地点" bindinput="handleTitleInput" placeholder-style="color:#b3b3b3;font-size:18px;" maxlenth="6" auto-height></input>
+    <view class="title-input-counter">{{locateCount}}/6</view>
     <view class='line'></view>
-    <textarea class="particularTextarea" placeholder="输入详情" maxlength="40" placeholder-style="color:#b3b3b3;font-size:18px;" style="height: 100px" />
+    <textarea class="particularTextarea" placeholder="输入详情" maxlength="40" bindinput="handleContentInput" placeholder-style="color:#b3b3b3;font-size:18px;" style="height: 100px" />
+    <view class="particular-input-counter">{{particularCount}}/40</view>
     <view class="image_content">
-        <view class='image' wx:for="{{img_url}}" wx:key="provide">
+        <view class='image' wx:for="{{images}}" wx:key="provide">
             <image class="moment_img" src="{{item}}"></image>
         </view>
-        <view class='addImgBlock'>
+        <view class='addImgBlock' wx:if="{{images.length<3}}">
             <image bindtap="chooseImg" class="moment_img" src='../../static/images/add (1).png'></image>
         </view>
     </view>
-    <button bindtap="send" class="btn1">
+    <button bindtap="send" class="btn1" >
         <image class='btnImg' src='../../static/images/right.png'></image>
         <view>发布</view>
     </button>

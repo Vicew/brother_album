@@ -41,6 +41,7 @@
     background-color: #D8D8D8;
 }
 .particularTextarea{
+    width:230px; 
     margin-top: 10px;
     left: 4px;
 }
@@ -65,4 +66,18 @@
   .btn1::after {
     border-radius: 98rpx;
     border: 0; 
+  }
+  .title-input-counter{
+    font-size: 40rpx;
+    color: rgb(223, 219, 219);
+    position: absolute;
+    left: 600rpx;
+    top: 60rpx;
+  }
+  .particular-input-counter{
+    font-size: 40rpx;
+    color: rgb(223, 219, 219);
+    position: absolute;
+    left: 600rpx;
+    top: 320rpx;
   }
