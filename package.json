@@ -1,0 +1,24 @@
+{
+  "name": "brother_album",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pandaomeng/brother_album.git"
+  },
+  "author": "pandaomeng",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pandaomeng/brother_album/issues"
+  },
+  "homepage": "https://github.com/pandaomeng/brother_album#readme",
+  "devDependencies": {
+    "eslint": "^5.15.3",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.16.0"
+  }
+}
