@@ -5,11 +5,12 @@
     <textarea class="particularTextarea" placeholder="输入详情" maxlength="40" bindinput="handleContentInput" placeholder-style="color:#b3b3b3;font-size:18px;" style="height: 100px" />
     <view class="particular-input-counter">{{particularCount}}/40</view>
     <view class="image_content">
-        <view class='image' wx:for="{{images}}" wx:key="provide">
-            <image class="moment_img" src="{{item}}"></image>
+        <view wx:for="{{images}}" class="closeLocate" wx:key="provide">
+            <image bind:tap="showBigImg" data-index="{{index}}" class="moment_img" src="{{item}}"></image>
+            <image class="closeCircle" src='../../static/images/closecircle.png' ></image>
         </view>
         <view class='addImgBlock' wx:if="{{images.length<3}}">
-            <image bindtap="chooseImg" class="moment_img" src='../../static/images/add (1).png'></image>
+            <image bindtap="chooseImg" class="moment_img" src='../../static/images/imgAdd.png'></image>
         </view>
     </view>
     <button bindtap="send" class="btn1" >

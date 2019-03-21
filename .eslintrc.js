@@ -25,7 +25,7 @@ module.exports = {
         ],
         "semi": [
             "error",
-            "never"
+            "always"
         ]
     },
     globals: {"Page": true, "wx": true},
